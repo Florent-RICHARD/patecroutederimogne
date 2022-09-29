@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: grey;
+    font-family: 'Montserrat', sans-serif
+}
+
+/*********************        MENU             **********************************/
+.header{
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    min-height: 50px;
+    background-color: rgba(0,0,0,0.70);
+}
+
+.header .menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .menu_left,
+.header .menu_right,
+.header .menu_right_collapse{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .menu_right_collapse{
+    display: none;
+}
+
+.header .icon_menu_open:hover,
+.header .icon_menu_close:hover{
+    cursor: pointer;
+}
+
+.header .menu_right_flyer{
+    background-color: rgba(0,0,0,0.80);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    padding-top: 50px;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+}
+
+.header .menu_right_flyer i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+.header .menu .title{
+    color: rgb(229, 203, 48);
+    background-color: rgba(112, 74, 73, 0.80);
+    text-shadow:2px 5px 12px rgba(0,0,0,0.80);
+    text-align: center;
+}
+
+.header .menu_right a,
+.header .menu_right_flyer a{
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.header .menu_right a:hover,
+.header .menu_right_flyer a:hover{
+    color: rgb(229, 203, 48);
+    border-bottom: 1px solid rgb(229, 203, 48);
+}
+
+/*********************        DESCRIPTION            **********************************/
+
+.container_description{
+    width: calc(100% - 100px);
+    height: 300px;
+    /*background-color: yellow;*/
+    display: flex;
+    margin: 50px;
+}
+
+.title_section{
+    text-decoration: underline;
+}
+
+.container_description .description{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_description .description img{
+    /*width: calc(100%/3);*/
+    width: 60%;
+    height: 100%;
+}
+
+.container_description .description .description_middle{
+    width: calc(100%/3);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
+/*********************        PRODUIT            **********************************/
+.container_produit,
+.container_livraison{
+    margin: 0 10%;
+    /*background-color: red;*/
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.80);
+    color: white;
+}
+
+.title h1{
+    border-bottom: 2px solid white;
+    margin: 10px 0;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-gap: 30px;
+    margin: 50px 0;
+}
+
+.card-wrapper{
+    position: relative;
+    min-height: 370px;
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+.card-wrapper:hover .card{
+    transform: rotateY(180deg);
+}
+
+.card{
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    color: white;
+    font-weight: bold;
+    cursor: grab;
+}
+
+.card-front,
+.card-back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.card-front{
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-wrapper:nth-child(even) .card-front{
+    background-color: rgb(47, 184, 47);
+}
+
+.card-front .p-front,
+.card-back .p-back{
+    text-align: center;
+}
+
+.card-front p,
+.card-back p{
+    font-size: 25px;
+    line-height: 35px;
+    text-decoration: underline;
+}
+
+.card-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-img img{
+    width: 95%;
+    max-height: 220px;
+    margin: 5px 0;
+}
+
+.arrow-icon{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+.card-price{
+    font-size: 30px;
+}
+
+.card-back{
+    background: orange;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-back .p-back{
+    height: 25%;
+}
+
+.card-back .ingredient-back{
+    height: 75%;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.card-back .ingredient-back span{
+    border-bottom: 2px solid white;
+}
+
+.card-wrapper:nth-child(even) .card-back{
+    background-color: rgb(47, 184, 47);
+}
+
+/*********************        LIVRAISON            **********************************/
+.container_livraison{
+    margin: 10px 10%;
+}
+
+.description_livraison{
+    background: orange;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.description_livraison span{
+    margin: 10px 0;
+}
+
+/*********************        CONTACT            **********************************/
+
+.container_contact{
+    background-color: rgba(112, 74, 73, 0.8);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_contact i{
+    font-size: 25px;
+}
+
+.container_contact .infos{
+    display: flex;
+}
+
+.container_contact .infos .child_contact{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+.link a{
+    text-decoration: none;
+    color: black;
+}
+
+.link a:hover{
+    border-bottom: 1px solid black;
+}
+
+
+/*********************        RESPONSIVE            **********************************/
+
+@media screen and (max-width: 1000px) {
+    .container_description .description img{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .header .menu_right a{
+        font-size: 1.0rem;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    header .menu_left .title{
+        font-size: 1.5rem;
+    }
+
+    .container_contact .infos .child_contact{
+        margin: 10px 0;
+    }
+
+    .description_livraison{
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 620px) {
+    .container_contact .infos span,
+    .container_contact .infos a {
+        font-size: 0.8rem;
+    }
+    
+    .container_contact .infos .child_contact{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header .menu_right a{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    header .menu_left .title{
+        font-size: 1.5rem;
+    }
+
+    .header .menu_left{
+        width: 100%;
+    }
+
+    .header .menu_right_collapse{
+        width: 20%;
+    }
+
+    .header .menu_right_collapse{
+        margin-right: 10px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .header .menu_right_collapse i{
+        color: white;
+        font-size: 30px;
+    }
+
+    .header .menu_right{
+        display: none;
+    }
+
+    .container_description .description img{
+        width: 100%;
+    }
+
+    .description_livraison{
+        font-size: 0.8rem;
+    }
+
+    .container_contact .infos{
+        display: block;
+    }
+
+    .container_contact .infos h3{
+        font-size: 2rem;
+    }
+
+    .container_contact .infos span,
+    .container_contact .infos a {
+        font-size: 1.5rem;
+    }
+
+    .container_contact .infos .child_contact{
+        width: 280px;
+    }
+}
+
+
+/*********************        ANIMATION            **********************************/
+
+.tracking-in-expand {
+	animation: tracking-in-expand 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    } 
+  }

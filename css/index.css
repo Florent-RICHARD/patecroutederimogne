@@ -103,7 +103,7 @@ body{
 
 .container_description{
     width: calc(100% - 100px);
-    height: 300px;
+    height: 350px;
     /*background-color: yellow;*/
     display: flex;
     margin: 50px;
@@ -126,16 +126,6 @@ body{
     width: 60%;
     height: 100%;
 }
-
-.container_description .description .description_middle{
-    width: calc(100%/3);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-}
-
 
 /*********************        PRODUIT            **********************************/
 .container_produit,
@@ -370,6 +360,10 @@ body{
     .header .menu_right a{
         font-size: 0.8rem;
     }
+
+    .container_description .description img{
+        height: 80%;
+    }
 }
 
 @media screen and (max-width: 530px) {
@@ -414,12 +408,12 @@ body{
     }
 
     .container_contact .infos h3{
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     .container_contact .infos span,
     .container_contact .infos a {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .container_contact .infos .child_contact{
@@ -427,6 +421,21 @@ body{
     }
 }
 
+@media screen and (max-width: 400px) {
+    .card-front .card-price{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .card-front p,
+    .card-back p{
+        font-size: 20px;
+    }
+    .card-back .ingredient-back{
+        font-size: 17px;
+    }
+}
 
 /*********************        ANIMATION            **********************************/
 

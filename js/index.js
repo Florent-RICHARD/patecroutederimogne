@@ -16,7 +16,7 @@ tableauProduit = [
     tableauProduit[8] = {id: 8, name: "Tartiflette Individuelle", price: "3,00", image: "tartiflette.jpg", ingr: ["Pâte brisée", "Lait", "Crème liquide", "Lardons", "Fromage à tartiflette", "Sel", "Poivre", "Muscade"]},
     tableauProduit[9] = {id: 9, name: "Tartine Façon Raclette", price: "5,80", image: "tartine_raclette.jpg", ingr: ["Baguette tradition", "Moutarde", "Lardon", "Oignon frits", "Tomate", "Fromage raclette", "Sel", "Poivre"]},
     tableauProduit[10] = {id: 10, name: "Petite Tourte Boudin Blanc", price: "4,00", image: "petite_tourte_boudin_blanc.jpg", ingr: ["Pâte feuilleté", "Boudin blanc", "Ail", "Persil", "Crème liquide", "Sel", "Poivre", "Oeufs"]},
-    /*tableauProduit[11] = {id: 11, name: "Petite Quiche Au Boudin Blanc", price: "3,00", image: "quiche_boudin_blanc.jpg", ingr: ["Pâte feuilleté", "Boudin blanc", "Ail", "Persil", "Crème liquide", "Sel", "Poivre", "Oeufs"]},*/
+    tableauProduit[11] = {id: 11, name: "Petite Quiche Au Boudin Blanc", price: "3,00", image: "quiche_boudin_blanc.jpg", ingr: ["Pâte brisé", "Crème liquide", "Lait", "Oeufs", "Muscade", "Sel", "Poivre", "Boudin blanc de Haybes", "Persil"]},
 ]
 
 function Ingredient(indexDiv){

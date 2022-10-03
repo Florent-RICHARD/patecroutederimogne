@@ -421,7 +421,7 @@ body{
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .card-front .card-price{
         font-size: 25px;
     }
@@ -432,9 +432,15 @@ body{
     .card-back p{
         font-size: 20px;
     }
+
+    .card-front .card-price{
+        font-size: 20px;
+    }
+
     .card-back .ingredient-back{
         font-size: 17px;
     }
+
 }
 
 /*********************        ANIMATION            **********************************/

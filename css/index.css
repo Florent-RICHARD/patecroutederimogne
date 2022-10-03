@@ -104,9 +104,8 @@ body{
 .container_description{
     width: calc(100% - 100px);
     height: 350px;
-    /*background-color: yellow;*/
     display: flex;
-    margin: 50px;
+    margin: 0 50px;
 }
 
 .title_section{
@@ -122,16 +121,24 @@ body{
 }
 
 .container_description .description img{
-    /*width: calc(100%/3);*/
-    width: 60%;
-    height: 100%;
+    margin: 0 20px;
+    width: 25%;
+    height: 70%;
+}
+
+.container_description .img1,
+.container_description .img2{
+   flex: 2;
+}
+
+.container_description .img3{
+   flex: 1.5;
 }
 
 /*********************        PRODUIT            **********************************/
 .container_produit,
 .container_livraison{
     margin: 0 10%;
-    /*background-color: red;*/
 }
 
 .title{
@@ -318,9 +325,19 @@ body{
 
 /*********************        RESPONSIVE            **********************************/
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 750px) {
+    .container_description{
+        width: 100%;
+        height: 300px;
+        margin: 0;
+    }
     .container_description .description img{
-        width: 80%;
+        height: 70%;
+        margin: 0 5px;
+    }
+
+    .container_contact .infos .child_contact{
+        margin: 10px 0;
     }
 }
 
@@ -335,15 +352,10 @@ body{
         font-size: 1.5rem;
     }
 
-    .container_contact .infos .child_contact{
-        margin: 10px 0;
-    }
-
     .description_livraison{
         font-size: 1rem;
     }
 }
-
 
 @media screen and (max-width: 620px) {
     .container_contact .infos span,
@@ -359,10 +371,6 @@ body{
 @media screen and (max-width: 600px) {
     .header .menu_right a{
         font-size: 0.8rem;
-    }
-
-    .container_description .description img{
-        height: 80%;
     }
 }
 
@@ -395,8 +403,8 @@ body{
         display: none;
     }
 
-    .container_description .description img{
-        width: 100%;
+    .container_description{
+        height: 250px;
     }
 
     .description_livraison{
@@ -427,7 +435,23 @@ body{
     }
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 450px) {
+    .container_description{
+        height: 550px;
+    }
+
+    .container_description .description{
+        flex-direction: column;
+    }
+
+    .container_description .description img{
+        margin: 5px 0;
+        width: 80%;
+        height: 30%;
+    }
+}
+
+@media screen and (max-width: 360px) {
     .card-front p,
     .card-back p{
         font-size: 20px;
